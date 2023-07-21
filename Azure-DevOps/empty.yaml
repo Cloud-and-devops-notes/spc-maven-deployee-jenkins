@@ -1,0 +1,12 @@
+trigger:
+  master
+pool: default
+variables:
+steps: 
+  - task: Maven@3
+    inputs:
+      mavenPOMFile: 'pom.xml' 
+
+    
+
+    
