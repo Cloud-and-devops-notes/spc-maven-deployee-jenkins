@@ -1,0 +1,127 @@
+RS-Activity to create 5 pods with nginx and alpine in one pod::
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx
+  labels:
+    app : nginx
+spec:
+  minReadySeconds: 4
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      name: nginx   
+      labels: 
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+        - name: alpine
+          image: alpine:latest
+          command:
+            - sleep
+            - 1d  
+
+----------------------------------------------------
+Statefulset:
+---
+ apiVersion: apps/v1
+ kind: StatefulSet
+ metadata: 
+   name: nginx
+   labels: 
+     app: nginx-ss
+ spec:
+   minReadySeconds: 4
+   replicas: 4
+   selector:
+     matchLabels:
+       app: nginx-ss
+   template: 
+     metadata:
+       name: nginx
+       labels:
+         app: nginx-ss
+     spec:
+       containers: 
+         - name: nginx
+           image: nginx:latest
+           ports:
+             - containerPort: 80
+           volumeMounts:
+             - name: my-ss-volume   
+               mountPath: /usr/share/nginx/html
+   volumeClaimTemplates:
+     - metadata:
+         name: my-ss-volume
+       spec:
+         accessModes:
+           - ReadOnlyMany  
+         volumeName: my-ss-volume  
+         storageClassName: managed
+         resources:
+            requests:
+              storage: 1Gi
+            #   memory: "64Mi"
+            #   cpu: "250m"
+            # limits:
+            #   memory: "128Mi"
+            #   cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-ss
+  labels:
+    app: nginx-ss
+spec:
+  selector: 
+    app: nginx-ss
+  type: clusterIP
+  ClusterIP: None
+  ports:
+    - port: 80 
+      protocol: TCP              
+
+-----------------------------------------------
+      
+
+           
+
+   
+
+
+         
+       
+       
+           
+
+
+     
+
+
+
+
+
+
+   
+   
+
+        
+
+       
+     
+
+
+
+       
+
+
+

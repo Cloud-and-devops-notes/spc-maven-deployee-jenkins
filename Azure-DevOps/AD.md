@@ -22,3 +22,20 @@
    22  ls
    23  ./run.sh
    24  history
+
+   ## &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+   ## $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4
+   ## %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   ## Planig--->develop--->testing--->bugs--->Relaese(deployement)
+   ## Normal configuration tools::::::::::::
+   ## Sytem admin and development
+   Whenever the devops teams wrote some configuration script(to automate and reduce errors) that script will be used by developer and others.
+  ## If developer need any additional software  then Configuartion tools have revert feature .
+  * Configuartion drift---> change in desired configuarion to actual configuartion
+
+## AZURE DEVOPS::::::::::::
+* ![pre](AZ-Images/17-Devops%20workflow.png)
+* Boards--->For plannings
+* Repository---> for source code management(CODE STORE)
+* Pipelines--->CICD
+  * 

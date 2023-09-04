@@ -5,3 +5,8 @@
 *.rar/
 *.mkv
 *.Movies/
+src/packages/*
+src/Tests/Nop.Tests/Connections.resx
+src/Presentation/Nop.Web/App_Data/browscap.xml
+src/Presentation/Nop.Web/App_Data/browscap.xml
+src/Presentation/Nop.Web/App_Data/browscap.xml 
