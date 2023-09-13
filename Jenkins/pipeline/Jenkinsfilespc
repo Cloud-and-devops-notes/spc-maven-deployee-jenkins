@@ -1,0 +1,21 @@
+pipeline{
+    agent{label 'java'}
+    environment {
+        PATH = '/usr/share/maven/apache-maven-3.9.4/bin:$PATH'
+    }
+    stages{
+        stage('VCS'){
+            steps{
+                   git url: 'https://github.com/Cloud-and-devops-notes/spring-petclinic-jenkins.git',
+                       branch: 'main'
+            }
+        }
+        stage ('build'){
+            steps{
+                // sh 'export PATH=$PATH:/usr/share/maven/apache-maven-3.9.4/bin'
+                sh 'ls'
+                sh 'mvn --version'
+            }           
+        }
+    }
+}

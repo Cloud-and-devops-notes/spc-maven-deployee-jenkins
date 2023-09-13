@@ -29,3 +29,10 @@ https://dlcdn.apache.org/maven/maven-3/3.9.4/binaries/
   7 RUN  mkdir /usr/share/maven
   8 RUN  tar -xvzf apache-maven-3.9.4-bin.tar.gz -C /usr/share/maven
   9 RUN export PATH="$PATH:/usr/share/maven/apache-maven-3.9.4/bin" >> /etc/environment
+
+
+  +++++++++++++++++++++
+  getiing error --->GPG error: https://packages.cloud.google.com/apt kubernetes-xenial InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY B53DC80D13EDEF05 
+  ## sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 6494C6D6997C215E
+
+  https://askubuntu.com/questions/943539/the-following-signatures-couldnt-be-verified-because-the-public-key-is-not-avai

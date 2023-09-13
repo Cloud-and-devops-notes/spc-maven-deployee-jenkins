@@ -1,0 +1,28 @@
+pipeline{
+    agent{label 'java'}
+    tools {
+        mvn 'maven'
+    }
+    stages{
+        stage('VCS'){
+            steps{
+                   git credentialsId: 'GIT_HUB_CREDENTIALS',
+                       url: 'https://github.com/Cloud-and-devops-notes/spring-petclinic-jenkins.git',
+                       branch: 'main'
+            }
+        }
+        // stage('nexus'){
+        //     steps{
+        //         nexusArtifactUploader artifacts: [[artifactId: 'spring-petclinic', classifier: '', file: '/home/ubuntu/spring-petclinic/target/spring-petclinic-3.1.0-SNAPSHOT.jar', type: 'jar']], credentialsId: 'nexus', groupId: 'org.springframework.samples', nexusUrl: '54.237.114.152:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '3.1.0-SNAPSHOT'
+        //     }
+        // }    
+        stage('Build & SonarQube Scan') {
+            steps {
+                sh 'mvn --version'
+            //   withSonarQubeEnv('SONAR_CLOUD') {
+            //         sh 'mvn clean install sonar:sonar -Dsonar.organization=qtdevopssohail123 -Dsonar.token=8c15adacf466a5ccd721f4f7cdb2c4bf17df84ab -Dsonar.projectKey=qtdevopssohail123'
+               }
+            }
+        }
+    }
+}
