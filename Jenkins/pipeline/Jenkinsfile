@@ -1,7 +1,7 @@
 pipeline{
     agent{label 'java'}
     tools {
-        mvn 'maven'
+        maven 'maven 3.9.4'
     }
     stages{
         stage('VCS'){
