@@ -953,6 +953,17 @@ How does Elasticsearch work in the ELK stack?
 Elasticsearch indexes and stores the logs and data ingested by Logstash, providing a powerful search and analytics engine.
 Remember, while these answers provide a starting point, it's important to dive deeper into these topics and practice your explanations. Tailor your responses to your own experiences and the specific role you're interviewing for.
 
+## Difference between update and upgrade
+![pre](devopsimages/1.png)
+* Upgrade	Update
+1.	The introduction of new and advanced functionalities or features to the software or applications 
+    is    the objective of the upgrade.	
+    Providing enhancement of the existing functionalities or features like support to plug-ins or security updates is its objective.
+2.	It is an entirely new software based on the previous software.	
+    It remains the old software but some functions are changed for different purposes.
+3.	It is a complex task to achieve.	
+     It is a relatively simpler task.
+
 
 
 

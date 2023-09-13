@@ -557,6 +557,9 @@ ku get pods -A
   # metedata: the set of data that describes the information about the other data
 
 
+  ## kubectl get pods --output=wide ---> To check pods are running in which node
+
+
   
 
 

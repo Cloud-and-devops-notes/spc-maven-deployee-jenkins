@@ -37,5 +37,12 @@
 * ![pre](AZ-Images/17-Devops%20workflow.png)
 * Boards--->For plannings
 * Repository---> for source code management(CODE STORE)
-* Pipelines--->CICD
+* Pipelines--->CI(test plans-test plans)CD
+* ## S[rints::
+* ## bpards--->Workitem()
+* Sprint-15 days it will generally
+* scrum meetings
+* developers testers project leader sit together and discuss about sprint
+* ## Repos::
+* 
   * 
